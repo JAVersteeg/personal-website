@@ -1,0 +1,19 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(pnpm add:*)",
+      "WebFetch(domain:stefanzweidel.dev)",
+      "WebFetch(domain:www.stefanzweidel.dev)",
+      "WebSearch",
+      "WebFetch(domain:webcache.googleusercontent.com)",
+      "WebFetch(domain:web.archive.org)",
+      "WebFetch(domain:chester.how)",
+      "WebFetch(domain:github.com)",
+      "WebFetch(domain:raw.githubusercontent.com)",
+      "Bash(curl -sL https://chester.how/writing)",
+      "Bash(curl -sL https://chester.how/_next/static/css/)",
+      "Bash(curl -sL \"https://chester.how/_next/static/css/dc005c0f31111d2a.css\")",
+      "Bash(pnpm build:*)"
+    ]
+  }
+}

@@ -1,9 +1,14 @@
 @import "tailwindcss";
 
+@custom-variant dark (&:where(.dark, .dark *));
+
 :root {
   --background: #ffffff;
   --foreground: #000000;
-  --text-color: #aaaaaa;
+  --text-color: #222222;
+  --spacing-r: 1rem;
+  --border-width-l: 0.2rem;
+  --color-border: var(--foreground);
 }
 
 @theme inline {
@@ -15,16 +20,13 @@
   --font-standard: var(--font-lora);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-    --text-color: #ffffff;
-
-  }
+.dark {
+  --background: #0a0a0a;
+  --foreground: #ededed;
+  --text-color: #d4d4d4;
 }
 
-body, p{
+body, p {
   font-family: var(--font-standard);
   font-optical-sizing: auto;
   font-weight: 100;
@@ -38,7 +40,6 @@ body {
 
 p {
   color: var(--text-color);
-  margin-bottom: 1em;
 }
 
 
@@ -57,5 +58,36 @@ h2 {
   
 h1 {
   font-size: 4rem;
-  letter-spacing: -0.04em;
+  letter-spacing: -0.05em;
+}
+
+a:hover {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.quote div {
+  display: flex;
+  align-items: center;
+  gap: 0 var(--spacing-r);
+}
+
+.quote div::after,
+.quote div::before {
+  content: "";
+  display: block;
+  flex: 1;
+  height: var(--border-width-l);
+  background-color: var(--color-border);
+}
+
+.quote-text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+  font-optical-sizing: auto;
+  font-weight: 100;
+  font-style: normal;
+  text-align: center;
 }

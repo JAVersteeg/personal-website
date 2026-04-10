@@ -1,8 +1,15 @@
+"use client";
+
 import Container from "@/components/container";
+import { useTranslation } from "@/hooks/useTranslation";
 
 export default function Writing() {
-  return <Container>
-    <h1>writing.</h1>
-    work in progress...
-  </Container>
+  const { t } = useTranslation();
+
+  return (
+    <Container>
+      <h1>{t("pages.writing.title")}</h1>
+      {t("pages.wip")}
+    </Container>
+  );
 }
