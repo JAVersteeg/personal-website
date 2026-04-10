@@ -2,16 +2,18 @@
 
 import { useState } from "react";
 import NavLinks from "@/components/nav-links";
+import { useTranslation } from "@/hooks/useTranslation";
 
 export default function MobileMenu() {
   const [isOpen, setIsOpen] = useState(false);
+  const { t } = useTranslation();
 
   return (
-    <div className="xl:hidden fixed top-4 right-4 z-50">
+    <div className="xl:hidden fixed mt-6 right-4 z-50">
       <button
         onClick={() => setIsOpen(!isOpen)}
         className="p-2"
-        aria-label={isOpen ? "Close menu" : "Open menu"}
+        aria-label={isOpen ? t("menu.close") : t("menu.open")}
       >
         <svg
           width="24"

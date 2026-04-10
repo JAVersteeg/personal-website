@@ -1,20 +1,20 @@
+"use client";
+
 import Container from "@/components/container";
+import Quote from "@/components/quote";
 import Sidebar from "@/components/sidebar";
+import { useTranslation } from "@/hooks/useTranslation";
 
 export default function Home() {
+  const { t } = useTranslation();
+
   return (
     <Container>
-      <Sidebar/>
-      <h1 className="header mb-4 mt-32">My name is Jochem.</h1>
-      <p>
-        Welcome! This is the place where I'm planning to share things about myself and 
-        my thoughts on things that I find interesting.
-      </p>
-      <p>
-        As you've probably noticed, the website is still a work in progress. 
-        I'm planning on updating the content as soon as possible.
-      </p>
-      <div className="height-2000"/>
+      <Sidebar />
+      <h1 className="header mb-4 mt-32">{t("home.title")}</h1>
+      <p className="mb-4">{t("home.welcome")}</p>
+      <p>{t("home.wip")}</p>
+      <Quote className="mx-auto my-12"></Quote>
     </Container>
   );
 }

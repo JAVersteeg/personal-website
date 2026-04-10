@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono, Fraunces, Lora } from "next/font/google";
 import Sidebar from "@/components/sidebar";
 import MobileMenu from "@/components/mobile-menu";
+import { LocaleProvider } from "@/features/i18n/locale-context";
+import { ThemeProvider } from "@/features/theme/theme-context";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -40,11 +42,15 @@ export default function RootLayout({
       className={`${geistSans.variable} ${geistMono.variable} ${fraunces.variable} ${lora.variable} h-full antialiased`}
     >
       <body className="min-h-full">
-        <MobileMenu />
-        <div className="max-w-2xl mx-auto px-4 relative">
-          <Sidebar />
-          <main className="flex flex-col">{children}</main>
-        </div>
+        <ThemeProvider>
+          <LocaleProvider>
+            <MobileMenu />
+            <div className="max-w-2xl mx-auto px-4 relative">
+              <Sidebar />
+              <main className="flex flex-col">{children}</main>
+            </div>
+          </LocaleProvider>
+        </ThemeProvider>
       </body>
     </html>
   );
