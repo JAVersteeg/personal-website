@@ -7,8 +7,10 @@
   --foreground: #000000;
   --text-color: #222222;
   --spacing-r: 1rem;
-  --border-width-l: 0.2rem;
+  --border-width-l: 0.15rem;
   --color-border: var(--foreground);
+  --background-card: #fafafa;
+  --background-card-hover: #f6f6f6;
 }
 
 @theme inline {
@@ -24,6 +26,8 @@
   --background: #0a0a0a;
   --foreground: #ededed;
   --text-color: #d4d4d4;
+  --background-card: #171717;
+  --background-card-hover: #1f1f1f;
 }
 
 body, p {
@@ -42,25 +46,42 @@ p {
   color: var(--text-color);
 }
 
-
 header,
-h1,
-h2 {
+h1, h2, h3 {
   font-family: var(--font-serif);
   font-optical-sizing: 50;
-  font-weight: 100;
+  font-weight: 200;
   font-style: normal;
   font-variation-settings:
     "SOFT" 50,
     "WONKY" 100;
-    margin-bottom: 0.2em;
   }
   
 h1 {
   font-size: 4rem;
   letter-spacing: -0.05em;
+  margin-bottom: 0.2em;
+}
+h2 {
+  font-size: 3rem;
+  letter-spacing: -0.05em;
+  margin-bottom: 0.2em;
+}
+h3 {
+  font-size: 2rem;
+  letter-spacing: -0.05em;
+}
+h4 {
+  font-family: Arial;
+  font-size: 0.9rem;
+  font-weight: 300;
+  opacity: 0.4;
+  margin-bottom: 0.4rem;
 }
 
+a{
+  font-family: var(--font-standard);
+}
 a:hover {
   text-decoration: underline;
   text-underline-offset: 4px;
@@ -90,4 +111,37 @@ a:hover {
   font-weight: 100;
   font-style: normal;
   text-align: center;
+}
+
+.separator {
+  width: 90%;
+  height: var(--border-width-l);
+  background-color: var(--foreground);
+}
+
+.card {
+  width: 320px;
+  height: 320px;
+  background-color: var(--background-card);
+  padding: var(--spacing-r);
+  border-radius: 0.5rem;
+  transition: 0.3s ease;
+} .card:hover {
+  background-color: var(--background-card-hover, var(--background-card));
+  text-decoration: none;
+}
+
+.card-title {
+  font-weight: 300;
+}
+
+.card-content{
+  line-height: 1.6rem;
+}
+
+.card-category {
+  font-family: Arial;
+  font-size: 0.8rem;
+  font-weight: 500;
+  opacity: 0.5;
 }

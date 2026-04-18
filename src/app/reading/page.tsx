@@ -1,15 +1,17 @@
 "use client";
 
-import Container from "@/components/container";
+import BackHome from "@/components/back-button";
+import ContainerFullWidth from "@/components/container-full";
 import { useTranslation } from "@/hooks/useTranslation";
 
 export default function Reading() {
   const { t } = useTranslation();
 
   return (
-    <Container>
+    <ContainerFullWidth>
+      <BackHome href="/">{`home`}</BackHome>
       <h1>{t("pages.reading.title")}</h1>
       {t("pages.wip")}
-    </Container>
+    </ContainerFullWidth>
   );
 }

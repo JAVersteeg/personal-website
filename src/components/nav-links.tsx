@@ -15,6 +15,7 @@ const links: { href: string; labelKey: TranslationKey }[] = [
   { href: "/writing", labelKey: "nav.writing" },
   { href: "/projects", labelKey: "nav.projects" },
   { href: "/about", labelKey: "nav.about" },
+  { href: "/guestbook", labelKey: "nav.guestbook" },
 ];
 
 export default function NavLinks({ onClick }: NavLinksProps) {
