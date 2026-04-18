@@ -9,10 +9,10 @@ export default function MobileMenu() {
   const { t } = useTranslation();
 
   return (
-    <div className="xl:hidden fixed mt-6 right-4 z-50">
+    <div className="xl:hidden relative">
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="p-2"
+        className="py-1"
         aria-label={isOpen ? t("menu.close") : t("menu.open")}
       >
         <svg
@@ -53,7 +53,7 @@ export default function MobileMenu() {
       </button>
 
       <nav
-        className={`absolute top-full right-0 mt-2 w-48 p-6 flex flex-col gap-4 bg-[var(--background)] border border-gray-200 rounded-lg shadow-lg transition-all duration-300 origin-top-right ${
+        className={`absolute top-full right-0 mt-2 w-48 p-6 flex flex-col gap-4 bg-[var(--background)] border border-gray-200 rounded-lg shadow-lg transition-all duration-300 origin-top-right z-50 ${
           isOpen
             ? "opacity-100 scale-100 translate-y-0"
             : "opacity-0 scale-95 -translate-y-2 pointer-events-none"

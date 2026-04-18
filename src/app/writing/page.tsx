@@ -1,15 +1,8 @@
-"use client";
-
-import Container from "@/components/container";
-import { useTranslation } from "@/hooks/useTranslation";
+import { getAllBlogPosts } from "@/lib/blog";
+import WritingContent from "./writing-content";
 
 export default function Writing() {
-  const { t } = useTranslation();
+  const posts = getAllBlogPosts();
 
-  return (
-    <Container>
-      <h1>{t("pages.writing.title")}</h1>
-      {t("pages.wip")}
-    </Container>
-  );
+  return <WritingContent posts={posts} />;
 }
