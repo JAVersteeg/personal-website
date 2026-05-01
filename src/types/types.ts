@@ -13,3 +13,11 @@ export interface CardProps {
   content: string;
   href?: string;
 }
+
+export interface InfoSectionProps {
+  className?: string;
+  title: string;
+  children: React.ReactNode;
+  borderColor?: string;
+  backgroundColour?: string;
+}
