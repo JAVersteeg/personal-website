@@ -1,0 +1,35 @@
+
+> personal-website@0.1.0 dev C:\personal-website
+> next dev
+
+▲ Next.js 16.2.3 (Turbopack)
+- Local:         http://localhost:3000
+- Network:       http://10.5.0.2:3000
+- Environments: .env.local
+✓ Ready in 1265ms
+
+ GET /stride 200 in 3.3s (next.js: 3.0s, application-code: 291ms)
+ GET /stride/privacy-policy 200 in 429ms (next.js: 321ms, application-code: 108ms)
+ GET /stride 200 in 63ms (next.js: 6ms, application-code: 57ms)
+ GET /stride/privacy-policy 200 in 73ms (next.js: 5ms, application-code: 68ms)
+ GET /stride/privacy-policy 200 in 83ms (next.js: 5ms, application-code: 78ms)
+ GET /stride 200 in 81ms (next.js: 7ms, application-code: 74ms)
+✓ Compiled in 88ms
+ GET /stride 200 in 192ms (next.js: 129ms, application-code: 63ms)
+ GET /stride 200 in 30ms (next.js: 4ms, application-code: 26ms)
+ GET /stride 200 in 175ms (next.js: 100ms, application-code: 75ms)
+ GET /stride 200 in 32ms (next.js: 5ms, application-code: 27ms)
+ GET /stride 200 in 146ms (next.js: 4ms, application-code: 142ms)
+ GET / 200 in 597ms (next.js: 490ms, application-code: 107ms)
+✓ Compiled in 158ms
+ GET / 200 in 186ms (next.js: 92ms, application-code: 95ms)
+ GET / 200 in 57ms (next.js: 27ms, application-code: 30ms)
+✓ Compiled in 50ms
+[browser] Uncaught Error: Internal Next.js error: Router action dispatched before initialization.
+[browser] Uncaught Error: Internal Next.js error: Router action dispatched before initialization.
+✓ Compiled in 41ms
+[browser] Uncaught Error: Internal Next.js error: Router action dispatched before initialization.
+[browser] Uncaught Error: Internal Next.js error: Router action dispatched before initialization.
+ GET /stride 200 in 295ms (next.js: 97ms, application-code: 199ms)
+[?25h
+ ELIFECYCLE  Command failed with exit code 1.
