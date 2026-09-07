@@ -7,6 +7,7 @@ import { useTranslation } from "@/hooks/useTranslation";
 import ReadingSection from "./reading/homepage_section";
 import WritingSection from "./writing/homepage_section";
 import { BlogPost } from "@/types/blog";
+import ProjectsSection from "./projects/homepage_section";
 
 interface HomeContentProps {
   posts: BlogPost[];
@@ -32,6 +33,8 @@ export default function HomeContent({ posts }: HomeContentProps) {
         <ReadingSection />
 
         <WritingSection posts={posts} />
+
+        <ProjectsSection />
       </Container>
     </div>
   );

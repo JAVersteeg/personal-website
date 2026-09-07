@@ -21,7 +21,7 @@ const COACH_FEATURES: FeatureItemProps[] = [
   },
   {
     title: 'Workout builder',
-    description: 'Bouw sessies op uit blokken — warming-up, actief, herstel, cooling-down — elk met tempo en duur.',
+    description: 'Bouw sessies op uit blokken: warming-up, actief, herstel, cooling-down. Elk met tempo en duur.',
   },
   {
     title: 'Weekkalender',
@@ -40,7 +40,7 @@ const TRAINEE_FEATURES: FeatureItemProps[] = [
   },
   {
     title: 'Sessiedetails',
-    description: 'Zie de volledige opbouw van elke workout — bloktype, tempo en duur per blok.',
+    description: 'Zie de volledige opbouw van elke workout: bloktype, tempo en duur per blok.',
   },
   {
     title: 'Voltooien & reflecteren',
@@ -155,7 +155,7 @@ export default function StridePage() {
             style={{ color: '#52525b', fontFamily: 'inherit', fontWeight: 400 }}
           >
             Stride is een trainingsapp voor hardloopcoaches en hun lopers.
-            Eén gedeeld overzicht van het plan — geen spreadsheets, geen
+            Het geeft een gedeeld overzicht van het trainingsschema. Zo heb je geen gedoe met spreadsheets, en geen
             heen-en-weer via WhatsApp.
           </p>
 
@@ -196,7 +196,7 @@ export default function StridePage() {
             className="mt-3 text-base leading-relaxed"
             style={{ color: '#71717a', fontFamily: 'inherit', fontWeight: 400 }}
           >
-            Bouw trainingsplannen, volg voortgang en lees reflecties — alles vanuit één overzicht.
+            Bouw trainingsplannen, volg voortgang en lees reflecties. Met Stride heb je alles in één app.
           </p>
           <div className="mt-10 grid grid-cols-1 gap-8 sm:grid-cols-2">
             {COACH_FEATURES.map((feature) => (
@@ -240,13 +240,60 @@ export default function StridePage() {
             className="mt-3 text-base leading-relaxed"
             style={{ color: '#71717a', fontFamily: 'inherit', fontWeight: 400 }}
           >
-            Bekijk je schema, log sessies en koppel Strava — zonder gedoe.
+            Bekijk je schema, log sessies en koppel Strava. Zonder gedoe.
           </p>
           <div className="mt-10 grid grid-cols-1 gap-8 sm:grid-cols-2">
             {TRAINEE_FEATURES.map((feature) => (
               <FeatureItem key={feature.title} {...feature} />
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* Interesse section */}
+      <section
+        className="relative z-10 px-6 py-20"
+        style={{ backgroundColor: '#ffffff', boxShadow: '0 4px 24px rgba(0, 0, 0, 0.08)' }}
+      >
+        <div className="mx-auto max-w-3xl">
+          <p
+            className="text-md uppercase tracking-[0.2em]"
+            style={{ color: '#84cc16', fontFamily: 'inherit', fontWeight: 700 }}
+          >
+            Interesse?
+          </p>
+          <h2
+            className="mt-3 text-xl sm:text-3xl"
+            style={{ color: '#18181b', fontFamily: 'inherit', fontWeight: 700, letterSpacing: '-0.02em' }}
+          >
+            Als coach of zoek naar meer professionalisering?
+          </h2>
+          <p
+            className="mt-3 text-base leading-relaxed"
+            style={{ color: '#71717a', fontFamily: 'inherit', fontWeight: 400 }}
+          >
+            Stride bespaart je als coach tijd en gedoe: geen losse spreadsheets
+            en WhatsApp-berichten meer om trainingsplannen te delen en
+            voortgang bij te houden. Je stelt plannen en workouts eenvoudig
+            samen, ziet in één oogopslag hoe elke loper ervoor staat en leest
+            hun reflecties direct terug. Zo kun je sneller bijsturen,
+            meer lopers tegelijk begeleiden, en je begeleiding naar een nieuw niveau tillen.
+          </p>
+          <p
+            className="mt-4 text-base leading-relaxed"
+            style={{ color: '#71717a', fontFamily: 'inherit', fontWeight: 400 }}
+          >
+            Wil je als coach gebruik maken van Stride, of wil je gewoon
+            meer weten? Stuur dan een mail naar{' '}
+            <a
+              href="mailto:jochem@jversteeg.com"
+              className="underline-offset-4 hover:underline"
+              style={{ color: '#65a30d', fontWeight: 600 }}
+            >
+              jochem@jversteeg.com
+            </a>
+            .
+          </p>
         </div>
       </section>
 

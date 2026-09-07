@@ -6,12 +6,17 @@ export interface ReadingListItem {
     cover: string,
 }
 
+import type { ReactNode } from "react";
+import type { TranslationKey } from "@/lib/translations";
+
 export interface CardProps {
   category: string;
   title: string;
-  subtitle: string;
+  subtitle?: string;
   content: string;
   href?: string;
+  image?: ReactNode;
+  eyebrowKey?: TranslationKey;
 }
 
 export interface InfoSectionProps {

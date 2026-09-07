@@ -4,6 +4,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useTranslation } from "@/hooks/useTranslation";
 import type { TranslationKey } from "@/lib/translations";
+import { StrideLogo } from "@/components/stride-logo";
 
 interface NavLinksProps {
   onClick?: () => void;
@@ -38,6 +39,14 @@ export default function NavLinks({ onClick }: NavLinksProps) {
           </Link>
         );
       })}
+      <Link
+        key="/stride"
+        href="/stride"
+        onClick={onClick}
+        className={`w-fit text-[var(--text-color)] ${pathname.startsWith("/stride") ? "opacity-100" : "opacity-80 hover:opacity-100"}`}
+      >
+        <StrideLogo width={80} />
+      </Link>
     </>
   );
 }

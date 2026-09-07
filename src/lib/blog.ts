@@ -38,3 +38,12 @@ export function getAllBlogPosts(): BlogPost[] {
         new Date(b.date).getTime() - new Date(a.date).getTime(),
     );
 }
+
+export function getAllProjects(): BlogPost[] {
+  return getBlogSlugs()
+    .map((slug) => getBlogPost(slug))
+    .sort(
+      (a, b) =>
+        new Date(b.date).getTime() - new Date(a.date).getTime(),
+    );
+}
