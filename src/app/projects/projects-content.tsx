@@ -17,6 +17,14 @@ export const PROJECTS: CardProps[] = [
     href: "/stride",
     image: <StrideLogo width={250} className="text-[var(--text-color)]" />,
   },
+  {
+    category: "Game",
+    eyebrowKey: "nav.projects",
+    title: "Road-cycling board game",
+    subtitle: "Hotseat road-cycling board game",
+    content: "A local hotseat web adaptation of the Flamme Rouge road-cycling board game.",
+    href: "/flamme-rouge/",
+  },
 ];
 
 export default function Projects() {
