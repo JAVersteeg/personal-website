@@ -266,7 +266,7 @@ export default function StridePage() {
             className="mt-3 text-xl sm:text-3xl"
             style={{ color: '#18181b', fontFamily: 'inherit', fontWeight: 700, letterSpacing: '-0.02em' }}
           >
-            Als coach of zoek naar meer professionalisering?
+            Als coach op zoek naar meer professionalisering?
           </h2>
           <p
             className="mt-3 text-base leading-relaxed"
