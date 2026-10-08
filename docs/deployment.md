@@ -10,7 +10,11 @@ pnpm build
 
 This generates the `out/` directory. Each route becomes a folder with an `index.html` (e.g. `out/about/index.html` → `/about`).
 
+Create a ZIP of the content of the `out/` directory.
+
 ## Upload to Vimexx
+
+Navigate to `https://web0140.zxcs.nl:2222/` > jversteeg.com > File Manager.
 
 The contents of `out/` go directly into `public_html` — not the `out/` folder itself. The `index.html` must sit directly in `public_html`.
 

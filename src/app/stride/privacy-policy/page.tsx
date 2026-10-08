@@ -20,8 +20,8 @@ function PolicySection({ title, children }: PolicySectionProps) {
           {title}
         </h4>
         <div
-          className="mt-2 space-y-3 text-sm leading-relaxed"
-          style={{ fontFamily: 'inherit', fontWeight: 400, color: 'inherit', opacity: 0.7 }}
+          className="mt-2 space-y-3 text-sm leading-relaxed [&_p]:text-inherit [&_ul]:text-inherit [&_li]:text-inherit"
+          style={{ fontFamily: 'inherit', fontWeight: 400, color: '#18181b', opacity: 0.7 }}
         >
           {children}
         </div>
@@ -187,6 +187,18 @@ export default function StridePrivacyPolicyPage() {
                 Wij bewaren je gegevens zolang je account actief is. Bij verwijdering van je account
                 worden alle persoonsgegevens en bijbehorende trainingsdata permanent verwijderd
                 binnen <strong>30 dagen</strong>.
+              </p>
+              <p>
+                Meer informatie over hoe je je account verwijdert en wat er precies wordt
+                verwijderd vind je op de pagina{' '}
+                <Link
+                  href="/stride/account-deletion"
+                  className="underline-offset-4 hover:underline"
+                  style={{ color: '#4d7c0f' }}
+                >
+                  Account verwijderen
+                </Link>
+                .
               </p>
             </PolicySection>
           </div>

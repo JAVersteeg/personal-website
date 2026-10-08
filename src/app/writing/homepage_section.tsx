@@ -17,7 +17,7 @@ export default function WritingSection({ posts }: WritingSectionProps) {
         <>
             <h2 className="mb-8">{t("pages.writing.title")}</h2>
             <div className="flex flex-wrap items-center justify-center columns-2 gap-8">
-                {posts.map((post) => ( 
+                {posts.map((post) => (
                     !post.isConcept && (
                         <Card
                             key={post.slug}
