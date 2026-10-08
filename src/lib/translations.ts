@@ -5,7 +5,7 @@ const en = {
   "home.welcome":
     "Welcome to my digital garden!",
   "home.bio":
-    "I work as a data engineer for NOC*NSF, the Dutch overarching sports association. In my free time as well, sports is the constant factor, and I do a lot of sports. Alongside, I like to read books and work on personal programming projects. I also like to focus on my personal health by eating the right foods, which are mostly plant-based. I'm far from perfect when it comes to all of those things, but I try to let them have the largest possible positive impact on my life.",
+    "I work as a data engineer for NOC*NSF, the Dutch overarching sports association. In my free time as well, sports is the constant factor, and I do a lot of it. When there's time left, I like to read books and work on personal programming projects such as the ones you can find below. I also like to focus on my health by eating the right foods, which are mostly plant-based. I'm far from perfect when it comes to all of those things, but I try to let them have the largest possible positive impact on my life.",
   "home.corner":
     "In times of polarisation, hate speech and misinformation, I would love my corner of the internet to be a beacon of calmth, intelectuality and passion. I find that these things are the cornerstones of what make me a happy person, and I believe that society could use a lot more of them.",
   "home.guestbook":
