@@ -1,19 +1,20 @@
 export interface ReadingListItem {
-    importance: number,
-    title: string,
-    author: string,
-    description: string,
-    cover: string,
+  importance: number;
+  title: string;
+  author: string;
+  description: string;
+  cover: string;
 }
 
-import type { ReactNode } from "react";
-import type { TranslationKey } from "@/lib/translations";
+import type { ReactNode } from 'react';
+import type { TranslationKey } from '@/lib/translations';
 
 export interface CardProps {
   category: string;
   title: string;
   subtitle?: string;
-  content: string;
+  contentTranslationKey?: string;
+  content?: string;
   href?: string;
   image?: ReactNode;
   eyebrowKey?: TranslationKey;

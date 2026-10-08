@@ -1,21 +1,21 @@
-import fs from "fs";
-import path from "path";
-import matter from "gray-matter";
-import readingTime from "reading-time";
-import { BlogPost } from "@/types/blog";
+import fs from 'fs';
+import path from 'path';
+import matter from 'gray-matter';
+import readingTime from 'reading-time';
+import { BlogPost } from '@/types/blog';
 
-const BLOG_DIR = path.join(process.cwd(), "src/content/blog");
+const BLOG_DIR = path.join(process.cwd(), 'src/content/blog');
 
 export function getBlogSlugs(): string[] {
   return fs
     .readdirSync(BLOG_DIR)
-    .filter((file) => file.endsWith(".mdx"))
-    .map((file) => file.replace(/\.mdx$/, ""));
+    .filter((file) => file.endsWith('.mdx'))
+    .map((file) => file.replace(/\.mdx$/, ''));
 }
 
 export function getBlogPost(slug: string): BlogPost {
   const filePath = path.join(BLOG_DIR, `${slug}.mdx`);
-  const raw = fs.readFileSync(filePath, "utf-8");
+  const raw = fs.readFileSync(filePath, 'utf-8');
   const { data, content } = matter(raw);
   const stats = readingTime(content);
 
@@ -33,17 +33,11 @@ export function getBlogPost(slug: string): BlogPost {
 export function getAllBlogPosts(): BlogPost[] {
   return getBlogSlugs()
     .map((slug) => getBlogPost(slug))
-    .sort(
-      (a, b) =>
-        new Date(b.date).getTime() - new Date(a.date).getTime(),
-    );
+    .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
 }
 
 export function getAllProjects(): BlogPost[] {
   return getBlogSlugs()
     .map((slug) => getBlogPost(slug))
-    .sort(
-      (a, b) =>
-        new Date(b.date).getTime() - new Date(a.date).getTime(),
-    );
+    .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
 }

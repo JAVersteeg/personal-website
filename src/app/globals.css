@@ -56,19 +56,19 @@ h1, h2, h3 {
     "SOFT" 50,
     "WONKY" 100;
   }
-  
+
 h1 {
   font-size: 4rem;
   letter-spacing: -0.05em;
   margin-bottom: 0.2em;
 }
 h2 {
-  font-size: 3rem;
+  font-size: 2.5rem;
   letter-spacing: -0.05em;
   margin-bottom: 0.2em;
 }
 h3 {
-  font-size: 2rem;
+  font-size: 1.5rem;
   letter-spacing: -0.05em;
 }
 h4 {
