@@ -1,48 +1,20 @@
-import Link from 'next/link'
-
-interface PolicySectionProps {
-  title: string
-  children: React.ReactNode
-}
-
-function PolicySection({ title, children }: PolicySectionProps) {
-  return (
-    <div className="flex gap-4">
-      <div
-        className="mt-1 rounded-full"
-        style={{ backgroundColor: '#84cc16', width: '8px', height: '8px', flex: 'none' }}
-      />
-      <div>
-        <h4
-          className="text-base uppercase leading-snug"
-          style={{ fontFamily: 'inherit', fontWeight: 600, color: 'inherit' }}
-        >
-          {title}
-        </h4>
-        <div
-          className="mt-2 space-y-3 text-sm leading-relaxed [&_p]:text-inherit [&_ul]:text-inherit [&_li]:text-inherit [&_ol]:text-inherit"
-          style={{ fontFamily: 'inherit', fontWeight: 400, color: '#18181b', opacity: 0.7 }}
-        >
-          {children}
-        </div>
-      </div>
-    </div>
-  )
-}
+import Link from 'next/link';
+import PolicySection from '@/components/policy-section';
+import StrideFooter from '@/components/stride-footer';
 
 export const metadata = {
   title: 'Account verwijderen — Stride',
-}
+};
 
 export default function StrideAccountDeletionPage() {
   return (
     <main
-      className="min-h-screen flex flex-col"
+      className="flex min-h-screen flex-col"
       style={{ backgroundColor: '#ffffff', color: '#18181b', fontFamily: 'inherit' }}
     >
       {/* Hero header */}
       <section
-        className="relative z-30 flex flex-col items-center justify-center text-center px-6 py-20 overflow-hidden"
+        className="relative z-30 flex flex-col items-center justify-center overflow-hidden px-6 py-20 text-center"
         style={{
           background: 'linear-gradient(135deg, #d9f99d 0%, #ecfccb 50%, #f0fdf4 100%)',
           boxShadow: '0 4px 24px rgba(0, 0, 0, 0.08)',
@@ -57,14 +29,19 @@ export default function StrideAccountDeletionPage() {
         </Link>
 
         <span
-          className="text-2xl font-black italic uppercase tracking-tight"
+          className="text-2xl font-black tracking-tight uppercase italic"
           style={{ color: '#84cc16', fontWeight: 900, fontFamily: 'inherit' }}
         >
           Stride
         </span>
         <h1
           className="mt-3 text-3xl sm:text-4xl"
-          style={{ color: '#18181b', fontFamily: 'inherit', fontWeight: 700, letterSpacing: '-0.02em' }}
+          style={{
+            color: '#18181b',
+            fontFamily: 'inherit',
+            fontWeight: 700,
+            letterSpacing: '-0.02em',
+          }}
         >
           Account verwijderen
         </h1>
@@ -83,21 +60,28 @@ export default function StrideAccountDeletionPage() {
       >
         <div className="mx-auto max-w-3xl">
           <p
-            className="text-base sm:text-lg leading-relaxed"
+            className="text-base leading-relaxed sm:text-lg"
             style={{ color: '#52525b', fontFamily: 'inherit', fontWeight: 400 }}
           >
             Je kunt op elk moment verwijdering van je Stride-account en alle bijbehorende gegevens
-            aanvragen, rechtstreeks vanuit de app. Deze pagina legt uit hoe, en precies wat er
-            wordt verwijderd.
+            aanvragen, rechtstreeks vanuit de app. Deze pagina legt uit hoe, en precies wat er wordt
+            verwijderd.
           </p>
 
           <div className="mt-10 grid grid-cols-1 gap-8 sm:grid-cols-2">
             <PolicySection title="Zo verwijder je je account">
               <ol className="list-decimal space-y-1 pl-5">
                 <li>Open de Stride app en log in.</li>
-                <li>Ga naar <strong>Instellingen</strong>, bereikbaar via het hamburgermenu.</li>
-                <li>Scroll naar beneden en tik op <strong>Account verwijderen</strong>.</li>
-                <li>Bevestig de melding. Verwijdering gebeurt direct en kan niet ongedaan worden gemaakt.</li>
+                <li>
+                  Ga naar <strong>Instellingen</strong>, bereikbaar via het hamburgermenu.
+                </li>
+                <li>
+                  Scroll naar beneden en tik op <strong>Account verwijderen</strong>.
+                </li>
+                <li>
+                  Bevestig de melding. Verwijdering gebeurt direct en kan niet ongedaan worden
+                  gemaakt.
+                </li>
               </ol>
               <p>
                 Een coach met nog toegewezen lopers moet hen eerst verwijderen of overdragen — de
@@ -107,8 +91,8 @@ export default function StrideAccountDeletionPage() {
 
             <PolicySection title="Geen toegang tot de app">
               <p>
-                Heb je geen toegang meer tot de app (bijvoorbeeld omdat je je toestel bent kwijtgeraakt
-                of niet kunt inloggen), mail dan naar{' '}
+                Heb je geen toegang meer tot de app (bijvoorbeeld omdat je je toestel bent
+                kwijtgeraakt of niet kunt inloggen), mail dan naar{' '}
                 <a
                   href="mailto:jochem@jversteeg.com"
                   className="underline-offset-4 hover:underline"
@@ -131,14 +115,19 @@ export default function StrideAccountDeletionPage() {
       >
         <div className="mx-auto max-w-3xl">
           <p
-            className="text-md uppercase tracking-[0.2em]"
+            className="text-md tracking-[0.2em] uppercase"
             style={{ color: '#84cc16', fontFamily: 'inherit', fontWeight: 700 }}
           >
             Wat er wordt verwijderd
           </p>
           <h2
             className="mt-3 text-xl sm:text-3xl"
-            style={{ color: '#18181b', fontFamily: 'inherit', fontWeight: 700, letterSpacing: '-0.02em' }}
+            style={{
+              color: '#18181b',
+              fontFamily: 'inherit',
+              fontWeight: 700,
+              letterSpacing: '-0.02em',
+            }}
           >
             Alles, direct en volledig
           </h2>
@@ -148,7 +137,10 @@ export default function StrideAccountDeletionPage() {
               <p>Het verwijderen van je account verwijdert permanent:</p>
               <ul className="list-disc space-y-1 pl-5">
                 <li>Je accountgegevens (e-mailadres, naam, rol, tempozones).</li>
-                <li>Je trainingsplannen en alle workouts daarin, inclusief voltooiingsstatus en reflecties.</li>
+                <li>
+                  Je trainingsplannen en alle workouts daarin, inclusief voltooiingsstatus en
+                  reflecties.
+                </li>
                 <li>Je koppeling tussen coach en loper.</li>
                 <li>Je vragenlijstantwoorden.</li>
                 <li>Je inloggegevens (Supabase Auth-gebruiker).</li>
@@ -166,20 +158,22 @@ export default function StrideAccountDeletionPage() {
       </section>
 
       {/* Contact */}
-      <section
-        className="px-6 py-16"
-        style={{ backgroundColor: '#ffffff' }}
-      >
+      <section className="px-6 py-16" style={{ backgroundColor: '#ffffff' }}>
         <div className="mx-auto max-w-3xl">
           <p
-            className="text-md uppercase tracking-[0.2em]"
+            className="text-md tracking-[0.2em] uppercase"
             style={{ color: '#84cc16', fontFamily: 'inherit', fontWeight: 700 }}
           >
             Vragen
           </p>
           <h2
             className="mt-3 text-xl sm:text-3xl"
-            style={{ color: '#18181b', fontFamily: 'inherit', fontWeight: 700, letterSpacing: '-0.02em' }}
+            style={{
+              color: '#18181b',
+              fontFamily: 'inherit',
+              fontWeight: 700,
+              letterSpacing: '-0.02em',
+            }}
           >
             Neem contact op
           </h2>
@@ -216,26 +210,7 @@ export default function StrideAccountDeletionPage() {
       </section>
 
       {/* Footer */}
-      <footer
-        className="border-t px-6 py-8"
-        style={{ borderColor: '#e4e4e7', backgroundColor: '#ffffff' }}
-      >
-        <div className="mx-auto flex max-w-4xl flex-col items-center justify-between gap-3 sm:flex-row">
-          <p
-            className="text-sm"
-            style={{ color: '#71717a', fontFamily: 'inherit', fontWeight: 400 }}
-          >
-            © 2026 Jochem Versteeg · Stride
-          </p>
-          <Link
-            href="/stride"
-            className="text-sm underline-offset-4 hover:underline"
-            style={{ color: '#71717a', fontFamily: 'inherit', fontWeight: 400 }}
-          >
-            Terug naar Stride
-          </Link>
-        </div>
-      </footer>
+      <StrideFooter links={[{ href: '/stride', label: 'Terug naar Stride' }]} />
     </main>
-  )
+  );
 }

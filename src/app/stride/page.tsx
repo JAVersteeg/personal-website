@@ -1,8 +1,8 @@
-import Link from 'next/link'
+import StrideFooter from '@/components/stride-footer';
 
 interface FeatureItemProps {
-  title: string
-  description: string
+  title: string;
+  description: string;
 }
 
 function StravaLogo() {
@@ -11,17 +11,19 @@ function StravaLogo() {
       <path d="M24 2L6 34h12l6-12 6 12h12L24 2z" fill="#FC4C02" />
       <path d="M36 44l-5-10h-11l16 24 16-24h-11l-5 10z" fill="rgb(253, 150, 100)" />
     </svg>
-  )
+  );
 }
 
 const COACH_FEATURES: FeatureItemProps[] = [
   {
     title: 'Trainingsplannen',
-    description: 'Stel plannen samen en wijs ze toe aan lopers met start- en einddatum en een doel.',
+    description:
+      'Stel plannen samen en wijs ze toe aan lopers met start- en einddatum en een doel.',
   },
   {
     title: 'Workout builder',
-    description: 'Bouw sessies op uit blokken: warming-up, actief, herstel, cooling-down. Elk met tempo en duur.',
+    description:
+      'Bouw sessies op uit blokken: warming-up, actief, herstel, cooling-down. Elk met tempo en duur.',
   },
   {
     title: 'Weekkalender',
@@ -31,7 +33,7 @@ const COACH_FEATURES: FeatureItemProps[] = [
     title: 'Loperoverzicht',
     description: 'Bekijk per loper de wekelijkse voortgang en lees hun reflecties na elke sessie.',
   },
-]
+];
 
 const TRAINEE_FEATURES: FeatureItemProps[] = [
   {
@@ -44,13 +46,14 @@ const TRAINEE_FEATURES: FeatureItemProps[] = [
   },
   {
     title: 'Voltooien & reflecteren',
-    description: 'Markeer sessies als voltooid, geef een score (1–10) en schrijf een korte reflectie.',
+    description:
+      'Markeer sessies als voltooid, geef een score (1–10) en schrijf een korte reflectie.',
   },
   {
     title: 'Strava & tempozones',
     description: 'Koppel Strava-activiteiten en bekijk je persoonlijke tempozones als referentie.',
   },
-]
+];
 
 function FeatureItem({ title, description }: FeatureItemProps) {
   return (
@@ -61,7 +64,7 @@ function FeatureItem({ title, description }: FeatureItemProps) {
       />
       <div>
         <h4
-          className="text-base uppercase leading-snug"
+          className="text-base leading-snug uppercase"
           style={{ fontFamily: 'inherit', fontWeight: 600, color: 'inherit' }}
         >
           {title}
@@ -74,48 +77,42 @@ function FeatureItem({ title, description }: FeatureItemProps) {
         </p>
       </div>
     </div>
-  )
+  );
 }
 
 export default function StridePage() {
   return (
     <main
-      className="min-h-screen flex flex-col"
+      className="flex min-h-screen flex-col"
       style={{ backgroundColor: '#ffffff', color: '#18181b', fontFamily: 'inherit' }}
     >
       {/* Hero */}
       <section
-        className="relative z-20 flex-1 flex flex-col items-center justify-center text-center px-6 py-32 overflow-hidden"
+        className="relative z-20 flex flex-1 flex-col items-center justify-center overflow-hidden px-6 py-32 text-center"
         style={{
           background: 'linear-gradient(135deg, #d9f99d 0%, #ecfccb 50%, #f0fdf4 100%)',
           boxShadow: '0 4px 24px rgba(0, 0, 0, 0.08)',
         }}
       >
         {/* Logo above card */}
-        <div className="relative inline-flex flex-col items-center mb-10">
+        <div className="relative mb-10 inline-flex flex-col items-center">
           <span
-            className="text-6xl sm:text-7xl lg:text-8xl font-black italic uppercase tracking-tight"
+            className="text-6xl font-black tracking-tight uppercase italic sm:text-7xl lg:text-8xl"
             style={{ color: '#18181b', fontWeight: 900, fontFamily: 'inherit' }}
           >
             Stride
           </span>
           <div className="mt-1 ml-32 flex w-full gap-2">
-            <span
-              className="h-[8px] w-1/5 rounded-full"
-              style={{ backgroundColor: '#4d7c0f' }}
-            />
-            <span
-              className="h-[8px] flex-1 rounded-full"
-              style={{ backgroundColor: '#84cc16' }}
-            />
+            <span className="h-[8px] w-1/5 rounded-full" style={{ backgroundColor: '#4d7c0f' }} />
+            <span className="h-[8px] flex-1 rounded-full" style={{ backgroundColor: '#84cc16' }} />
           </div>
         </div>
 
         {/* Card wrapper with background wordmark */}
-        <div className="relative max-w-xl w-full">
+        <div className="relative w-full max-w-xl">
           {/* Giant background wordmark centered behind card */}
           <span
-            className="pointer-events-none absolute font-black italic uppercase select-none"
+            className="pointer-events-none absolute font-black uppercase italic select-none"
             style={{
               left: 'calc(50% - 40px)',
               top: '50%',
@@ -134,7 +131,7 @@ export default function StridePage() {
 
           {/* Frosted glass card */}
           <div
-            className="relative rounded-2xl px-10 py-10 sm:px-14 sm:py-12 w-full text-center"
+            className="relative w-full rounded-2xl px-10 py-10 text-center sm:px-14 sm:py-12"
             style={{
               backgroundColor: 'rgba(255, 255, 255, 0.6)',
               backdropFilter: 'blur(20px)',
@@ -143,33 +140,33 @@ export default function StridePage() {
               boxShadow: '0 8px 32px rgba(0, 0, 0, 0.06)',
             }}
           >
-          <p
-            className="text-sm uppercase tracking-[0.25em]"
-            style={{ color: '#65a30d', fontFamily: 'inherit', fontWeight: 700 }}
-          >
-            Versnelt jouw vooruitgang
-          </p>
+            <p
+              className="text-sm tracking-[0.25em] uppercase"
+              style={{ color: '#65a30d', fontFamily: 'inherit', fontWeight: 700 }}
+            >
+              Versnelt jouw vooruitgang
+            </p>
 
-          <p
-            className="mt-6 text-base sm:text-lg leading-relaxed"
-            style={{ color: '#52525b', fontFamily: 'inherit', fontWeight: 400 }}
-          >
-            Stride is een trainingsapp voor hardloopcoaches en hun lopers.
-            Het geeft een gedeeld overzicht van het trainingsschema. Zo heb je geen gedoe met spreadsheets, en geen
-            heen-en-weer via WhatsApp.
-          </p>
+            <p
+              className="mt-6 text-base leading-relaxed sm:text-lg"
+              style={{ color: '#52525b', fontFamily: 'inherit', fontWeight: 400 }}
+            >
+              Stride is een trainingsapp voor hardloopcoaches en hun lopers. Het geeft een gedeeld
+              overzicht van het trainingsschema. Zo heb je geen gedoe met spreadsheets, en geen
+              heen-en-weer via WhatsApp.
+            </p>
 
-          <span
-            className="mt-8 inline-block rounded-full px-4 py-1.5 text-xs uppercase tracking-wide"
-            style={{
-              backgroundColor: '#ecfccb',
-              color: '#65a30d',
-              fontFamily: 'inherit',
-              fontWeight: 600,
-            }}
-          >
-            Binnenkort beschikbaar
-          </span>
+            <span
+              className="mt-8 inline-block rounded-full px-4 py-1.5 text-xs tracking-wide uppercase"
+              style={{
+                backgroundColor: '#ecfccb',
+                color: '#65a30d',
+                fontFamily: 'inherit',
+                fontWeight: 600,
+              }}
+            >
+              Binnenkort beschikbaar
+            </span>
           </div>
         </div>
       </section>
@@ -181,14 +178,19 @@ export default function StridePage() {
       >
         <div className="mx-auto max-w-3xl">
           <p
-            className="text-md uppercase tracking-[0.2em]"
+            className="text-md tracking-[0.2em] uppercase"
             style={{ color: '#84cc16', fontFamily: 'inherit', fontWeight: 700 }}
           >
             Voor coaches
           </p>
           <h2
             className="mt-3 text-xl sm:text-3xl"
-            style={{ color: '#18181b', fontFamily: 'inherit', fontWeight: 700, letterSpacing: '-0.02em' }}
+            style={{
+              color: '#18181b',
+              fontFamily: 'inherit',
+              fontWeight: 700,
+              letterSpacing: '-0.02em',
+            }}
           >
             Alles om je lopers te begeleiden
           </h2>
@@ -196,7 +198,8 @@ export default function StridePage() {
             className="mt-3 text-base leading-relaxed"
             style={{ color: '#71717a', fontFamily: 'inherit', fontWeight: 400 }}
           >
-            Bouw trainingsplannen, volg voortgang en lees reflecties. Met Stride heb je alles in één app.
+            Bouw trainingsplannen, volg voortgang en lees reflecties. Met Stride heb je alles in één
+            app.
           </p>
           <div className="mt-10 grid grid-cols-1 gap-8 sm:grid-cols-2">
             {COACH_FEATURES.map((feature) => (
@@ -215,7 +218,7 @@ export default function StridePage() {
         <svg
           viewBox="0 0 24 24"
           xmlns="http://www.w3.org/2000/svg"
-          className="pointer-events-none absolute left-3/4 top-1/2 -translate-x-1/2 -translate-y-1/2"
+          className="pointer-events-none absolute top-1/2 left-3/4 -translate-x-1/2 -translate-y-1/2"
           style={{ width: '700px', height: '700px', opacity: 0.04 }}
         >
           <path
@@ -225,14 +228,19 @@ export default function StridePage() {
         </svg>
         <div className="relative mx-auto max-w-3xl">
           <p
-            className="text-md uppercase tracking-[0.2em]"
+            className="text-md tracking-[0.2em] uppercase"
             style={{ color: '#84cc16', fontFamily: 'inherit', fontWeight: 700 }}
           >
             Voor lopers
           </p>
           <h2
             className="mt-3 text-xl sm:text-3xl"
-            style={{ color: '#18181b', fontFamily: 'inherit', fontWeight: 700, letterSpacing: '-0.02em' }}
+            style={{
+              color: '#18181b',
+              fontFamily: 'inherit',
+              fontWeight: 700,
+              letterSpacing: '-0.02em',
+            }}
           >
             Je training, overzichtelijk en compleet
           </h2>
@@ -257,14 +265,19 @@ export default function StridePage() {
       >
         <div className="mx-auto max-w-3xl">
           <p
-            className="text-md uppercase tracking-[0.2em]"
+            className="text-md tracking-[0.2em] uppercase"
             style={{ color: '#84cc16', fontFamily: 'inherit', fontWeight: 700 }}
           >
             Interesse?
           </p>
           <h2
             className="mt-3 text-xl sm:text-3xl"
-            style={{ color: '#18181b', fontFamily: 'inherit', fontWeight: 700, letterSpacing: '-0.02em' }}
+            style={{
+              color: '#18181b',
+              fontFamily: 'inherit',
+              fontWeight: 700,
+              letterSpacing: '-0.02em',
+            }}
           >
             Als coach op zoek naar meer professionalisering?
           </h2>
@@ -272,19 +285,18 @@ export default function StridePage() {
             className="mt-3 text-base leading-relaxed"
             style={{ color: '#71717a', fontFamily: 'inherit', fontWeight: 400 }}
           >
-            Stride bespaart je als coach tijd en gedoe: geen losse spreadsheets
-            en WhatsApp-berichten meer om trainingsplannen te delen en
-            voortgang bij te houden. Je stelt plannen en workouts eenvoudig
-            samen, ziet in één oogopslag hoe elke loper ervoor staat en leest
-            hun reflecties direct terug. Zo kun je sneller bijsturen,
-            meer lopers tegelijk begeleiden, en je begeleiding naar een nieuw niveau tillen.
+            Stride bespaart je als coach tijd en gedoe: geen losse spreadsheets en
+            WhatsApp-berichten meer om trainingsplannen te delen en voortgang bij te houden. Je
+            stelt plannen en workouts eenvoudig samen, ziet in één oogopslag hoe elke loper ervoor
+            staat en leest hun reflecties direct terug. Zo kun je sneller bijsturen, meer lopers
+            tegelijk begeleiden, en je begeleiding naar een nieuw niveau tillen.
           </p>
           <p
             className="mt-4 text-base leading-relaxed"
             style={{ color: '#71717a', fontFamily: 'inherit', fontWeight: 400 }}
           >
-            Wil je als coach gebruik maken van Stride, of wil je gewoon
-            meer weten? Stuur dan een mail naar{' '}
+            Wil je als coach gebruik maken van Stride, of wil je gewoon meer weten? Stuur dan een
+            mail naar{' '}
             <a
               href="mailto:jochem@jversteeg.com"
               className="underline-offset-4 hover:underline"
@@ -298,26 +310,12 @@ export default function StridePage() {
       </section>
 
       {/* Footer */}
-      <footer
-        className="border-t px-6 py-8"
-        style={{ borderColor: '#e4e4e7', backgroundColor: '#ffffff' }}
-      >
-        <div className="mx-auto flex max-w-4xl flex-col items-center justify-between gap-3 sm:flex-row">
-          <p
-            className="text-sm"
-            style={{ color: '#71717a', fontFamily: 'inherit', fontWeight: 400 }}
-          >
-            © 2026 Stride · Jochem Versteeg
-          </p>
-          <Link
-            href="/stride/privacy-policy"
-            className="text-sm underline-offset-4 hover:underline"
-            style={{ color: '#71717a', fontFamily: 'inherit', fontWeight: 400 }}
-          >
-            Privacybeleid
-          </Link>
-        </div>
-      </footer>
+      <StrideFooter
+        links={[
+          { href: '/stride/privacy-policy', label: 'Privacybeleid' },
+          { href: '/stride/terms', label: 'Algemene voorwaarden' },
+        ]}
+      />
     </main>
-  )
+  );
 }
