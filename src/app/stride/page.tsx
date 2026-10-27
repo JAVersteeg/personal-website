@@ -1,4 +1,5 @@
 import StrideFooter from '@/components/stride-footer';
+import { ScreenshotsSection } from '@/features/stride-screenshots/components/screenshots-section';
 
 interface FeatureItemProps {
   title: string;
@@ -170,6 +171,8 @@ export default function StridePage() {
           </div>
         </div>
       </section>
+
+      <ScreenshotsSection />
 
       {/* Coach section */}
       <section

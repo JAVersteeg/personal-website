@@ -8,7 +8,7 @@ De tekst hieronder wordt gepubliceerd op `https://jversteeg.com/stride/terms`. W
 
 ## 1. Wie wij zijn
 
-Stride is een app voor coaches en trainees, aangeboden door Jochem Versteeg, KvK-nummer [invullen], jochem@jversteeg.com. Door een account aan te maken of in te loggen ga je akkoord met deze voorwaarden. Het privacybeleid hoort erbij.
+Stride is een app voor coaches en trainees, aangeboden door Jochem Versteeg, KvK-nummer 84688564, jochem@jversteeg.com. Door een account aan te maken of in te loggen ga je akkoord met deze voorwaarden, inclusief het privacybeleid.
 
 ## 2. Je account
 

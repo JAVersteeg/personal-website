@@ -50,7 +50,7 @@ export default function StridePrivacyPolicyPage() {
           className="mt-3 text-sm"
           style={{ color: '#52525b', fontFamily: 'inherit', fontWeight: 400 }}
         >
-          Ingangsdatum: 15 mei 2026 &nbsp;·&nbsp; Laatst bijgewerkt: 21 oktober 2026
+          Ingangsdatum: 15 mei 2026 &nbsp;·&nbsp; Laatst bijgewerkt: 27 oktober 2026
         </p>
       </section>
 
@@ -176,6 +176,12 @@ export default function StridePrivacyPolicyPage() {
                     de activiteit.
                   </li>
                   <li>
+                    <strong>Garmin Connect, alleen als je koppelt:</strong> je Garmin-gebruikers-ID,
+                    de toestemmingen die je Stride in Garmin Connect gaf, de sleutels waarmee we
+                    workouts in je Garmin Connect mogen zetten en, per workout die we daar
+                    neerzetten, de nummers die Garmin eraan gaf.
+                  </li>
+                  <li>
                     <strong>Organisatie:</strong> naam, kleur en logo&apos;s, en aanvragen om die te
                     wijzigen.
                   </li>
@@ -207,8 +213,15 @@ export default function StridePrivacyPolicyPage() {
                 Stride vraagt niet naar je gezondheid. Wat je opschrijft kan toch over je gezondheid
                 gaan, bijvoorbeeld een blessure in een reflectie. Dat zijn bijzondere
                 persoonsgegevens. Daarom kun je reflecties alleen schrijven als je daar in de app
-                uitdrukkelijk toestemming voor geeft. Die toestemming kun je altijd intrekken.
-                Zonder toestemming werkt de rest van de app gewoon.
+                uitdrukkelijk toestemming voor geeft. Hoor je bij een organisatie, dan geef je die
+                toestemming aan die organisatie, anders aan Stride. Stap je over naar een andere
+                organisatie, dan vragen we het opnieuw.
+              </p>
+              <p>
+                Zonder toestemming kun je workouts gewoon afronden en een score geven, maar geen
+                reflectie schrijven. Je coach ziet dan alleen je score. Je kunt je toestemming
+                altijd intrekken in Instellingen. Je reflecties worden dan verwijderd. Dat gebeurt
+                ook als je geen toestemming geeft terwijl je al reflecties schreef.
               </p>
               <p>
                 Bij een pauze kan je coach een reden noteren. De app vraagt daar om een korte reden
@@ -262,6 +275,11 @@ export default function StridePrivacyPolicyPage() {
                     [
                       'Strava',
                       'Je activiteiten aan workouts koppelen en aan je coach tonen',
+                      'Toestemming (art. 6 lid 1a), die je geeft bij het koppelen',
+                    ],
+                    [
+                      'Garmin Connect',
+                      'De workouts van je coach in je Garmin Connect-agenda zetten en bijwerken',
                       'Toestemming (art. 6 lid 1a), die je geeft bij het koppelen',
                     ],
                     [
@@ -349,8 +367,15 @@ export default function StridePrivacyPolicyPage() {
                 />
                 <p>
                   Met deze partijen hebben we afspraken over het verwerken van je gegevens.{' '}
-                  <strong>Strava</strong> is geen verwerker van ons: je koppelt je eigen
-                  Strava-account, en voor wat bij Strava staat geldt het privacybeleid van Strava.
+                  <strong>Strava</strong> en <strong>Garmin</strong> zijn geen verwerkers van ons:
+                  je koppelt je eigen account, en voor wat daar staat geldt het privacybeleid van
+                  Strava of Garmin.
+                </p>
+                <p>
+                  Koppel je Garmin Connect, dan zetten we op jouw verzoek de workouts van je coach
+                  van 7 dagen terug tot 14 dagen vooruit in je Garmin Connect: naam, omschrijving,
+                  blokken, tempo&apos;s en dag. Nooit je reflecties, scores of pauzes. Garmin
+                  bewaart ze volgens zijn eigen voorwaarden.
                 </p>
                 <p>We verkopen je gegevens niet en delen ze niet voor advertenties.</p>
               </PolicySection>
@@ -380,6 +405,12 @@ export default function StridePrivacyPolicyPage() {
                   <li>
                     <strong>Strava:</strong> tot je ontkoppelt. Dan verwijderen we de koppeling en
                     de Strava-gegevens bij je workouts. Afgeronde workouts blijven afgerond.
+                  </li>
+                  <li>
+                    <strong>Garmin Connect:</strong> tot je ontkoppelt. Dan halen we onze workouts
+                    uit je Garmin Connect en verwijderen we de koppeling. Verwijder je Stride in
+                    Garmin Connect zelf, dan verwijderen we de koppeling ook; de workouts die al in
+                    Garmin Connect stonden blijven daar, omdat we er dan niet meer bij kunnen.
                   </li>
                   <li>
                     <strong>Als je organisatie stopt met Stride:</strong> dan verwijderen we de
@@ -443,9 +474,9 @@ export default function StridePrivacyPolicyPage() {
                     <strong>bezwaar</strong> tegen verwerking op grond van gerechtvaardigd belang;
                   </li>
                   <li>
-                    <strong>intrekken van toestemming</strong>: ontkoppel Strava in Instellingen, of
-                    trek je toestemming voor reflecties daar in. Wat we eerder verwerkten blijft
-                    rechtmatig.
+                    <strong>intrekken van toestemming</strong>: ontkoppel Strava of Garmin Connect
+                    in Instellingen, of trek je toestemming voor reflecties daar in. Wat we eerder
+                    verwerkten blijft rechtmatig.
                   </li>
                 </ul>
                 <p>
@@ -491,7 +522,7 @@ export default function StridePrivacyPolicyPage() {
                 <li>Wachtwoorden worden alleen versleuteld opgeslagen.</li>
                 <li>
                   Back-ups zijn versleuteld voordat ze de database verlaten, en bevatten geen
-                  wachtwoorden of Strava-sleutels.
+                  wachtwoorden of sleutels voor Strava of Garmin.
                 </li>
               </ul>
             </PolicySection>

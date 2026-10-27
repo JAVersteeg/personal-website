@@ -1,6 +1,6 @@
 # Account verwijderen
 
-Laatst bijgewerkt: 21 oktober 2026
+Laatst bijgewerkt: 27 oktober 2026
 
 Je kunt je Stride-account op elk moment verwijderen, rechtstreeks in de app. Deze pagina legt uit hoe, wat er verdwijnt en wat er (kort) blijft.
 
@@ -27,6 +27,7 @@ Kun je niet meer inloggen, bijvoorbeeld omdat je je telefoon kwijt bent? Mail da
 - Je antwoorden op de vragenlijst.
 - Als je getraind wordt: je trainingsschema's met alle workouts, je scores en reflecties, de periodisering, je pauze en het overzicht van je activiteit dat je coach ziet.
 - Je Strava-koppeling, met de Strava-gegevens bij je workouts.
+- Je Garmin Connect-koppeling. Stride haalt eerst zijn workouts uit je Garmin Connect en meldt zich daar af.
 - Als je coach bent: je koppelingen met je trainees en je workoutbibliotheek. Je trainees houden hun schema's.
 
 ## Wat er nog even blijft
@@ -36,6 +37,7 @@ Kun je niet meer inloggen, bijvoorbeeld omdat je je telefoon kwijt bent? Mail da
 - **Beslissingen als beheerder.** Aanvragen die je als beheerder hebt goedgekeurd of afgewezen blijven bestaan, maar niet meer op jouw naam.
 - **Je organisatie.** De naam en het logo van je organisatie horen bij de organisatie, niet bij jou, en blijven bestaan.
 - **Strava.** Stride heeft na het verwijderen geen toegang meer tot je Strava. Je activiteiten op Strava zelf blijven staan. Stride staat nog wel in je Strava-instellingen onder "Mijn apps"; daar kun je het ook verwijderen.
+- **Garmin Connect.** Was Garmin niet bereikbaar toen je je account verwijderde, dan kunnen workouts van Stride in je Garmin Connect zijn blijven staan. Die kun je daar zelf verwijderen, net als Stride bij de gekoppelde apps in je Garmin Connect-instellingen.
 
 ## Vragen
 

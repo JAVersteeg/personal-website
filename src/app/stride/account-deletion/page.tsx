@@ -49,7 +49,7 @@ export default function StrideAccountDeletionPage() {
           className="mt-3 text-sm"
           style={{ color: '#52525b', fontFamily: 'inherit', fontWeight: 400 }}
         >
-          Ingangsdatum: 5 september 2026 &nbsp;·&nbsp; Laatst bijgewerkt: 21 oktober 2026
+          Ingangsdatum: 5 september 2026 &nbsp;·&nbsp; Laatst bijgewerkt: 27 oktober 2026
         </p>
       </section>
 
@@ -140,6 +140,10 @@ export default function StrideAccountDeletionPage() {
                 <li>Je koppeling met je coach, en de aanvragen om je te koppelen.</li>
                 <li>Je antwoorden op de vragenlijst.</li>
                 <li>Je Strava-koppeling, met de Strava-gegevens bij je workouts.</li>
+                <li>
+                  Je Garmin Connect-koppeling. Stride haalt eerst zijn workouts uit je Garmin
+                  Connect en meldt zich daar af.
+                </li>
               </ul>
             </PolicySection>
 
@@ -219,6 +223,14 @@ export default function StrideAccountDeletionPage() {
                 Stride heeft na het verwijderen geen toegang meer tot je Strava. Je activiteiten op
                 Strava zelf blijven staan. Stride staat nog wel in je Strava-instellingen onder
                 &ldquo;Mijn apps&rdquo;; daar kun je het ook verwijderen.
+              </p>
+            </PolicySection>
+
+            <PolicySection title="Garmin Connect">
+              <p>
+                Was Garmin niet bereikbaar toen je je account verwijderde, dan kunnen workouts van
+                Stride in je Garmin Connect zijn blijven staan. Die kun je daar zelf verwijderen,
+                net als Stride bij de gekoppelde apps in je Garmin Connect-instellingen.
               </p>
             </PolicySection>
           </div>
